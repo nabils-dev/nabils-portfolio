@@ -1,0 +1,2 @@
+-add "borderAnimation" parameter to Card
+-think about layout of "About","Projects","Contact" sections
