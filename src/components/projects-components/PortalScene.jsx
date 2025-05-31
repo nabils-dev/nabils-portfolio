@@ -84,7 +84,7 @@ export const PortalScene = ({ active, setActive }) => {
         if (active) scene.getObjectByName(active)?.getWorldPosition(target);
 
         cc.setLookAt(cx, cy, cz, target.x, target.y, target.z, true);
-    }, [active]);
+    }, [active,scene]);
 
     /* instant jump & lock coordinate */
     useEffect(() => {
@@ -130,7 +130,7 @@ export const PortalScene = ({ active, setActive }) => {
                 setActive={handleSetActive}
                 hovered={hovered}
                 setHovered={setHovered}
-                scaleInactive={1}
+                scaleInactive={1.3}
             >
                 <StarsBackground size={4} spread={20} />
                 <Earth />

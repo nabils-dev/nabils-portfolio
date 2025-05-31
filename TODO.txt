@@ -1,3 +1,16 @@
 -add "borderAnimation" parameter to Card
 
 -bg color-transition between hero and projects sections
+    each section own bg-color
+    transition between
+
+-make portal border nicer
+    maybe some particles
+
+-landing section layout
+    add techstack,etc.
+    make it look modern,clean
+
+-contact section
+
+-consistent typography and color scheme
