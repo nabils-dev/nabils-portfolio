@@ -3,9 +3,9 @@ import Card from "../Card.jsx";
 
 const About = () => {
     return (
-        <div className="flex items-start justify-center pt-10 px-4">
-            <Card className="w-full max-w-sm mx-auto">
-                <ul className="list-disc p-6 space-y-6 text-2xl">
+        <div className="flex items-start justify-center ml-0 lg:ml-50  p-5">
+            <Card>
+                <ul className="list-disc text-2xl space-y-10">
                     <li>
                         <b className="text-highlight">Full-stack software engineer</b> who brings ideas to life through clean, re-usable and maintainable code.
                     </li>

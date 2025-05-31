@@ -11,7 +11,7 @@ const Hero = () => {
     });
 
     return (
-        <div className="flex items-start justify-center pt-10 px-4">
+        <div className="flex items-start justify-center pt-10 px-4 border border-red-500">
             <Card className="w-full max-w-sm mx-auto">
                 <div className="glow" />
                 <div className="flex space-x-6 p-5">

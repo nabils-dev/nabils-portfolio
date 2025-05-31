@@ -31,7 +31,7 @@ const Card = ({children, ...props }) => {
             ref={cardRef}
             onMouseMove={handleMouseMove(cardRef)}
             {...props}
-            className="card card-border rounded-xl p-5 text-card-txt z-10 flex flex-col group"
+            className="card card-border rounded-xl p-10 text-card-txt z-10 flex flex-col group"
         >
             {children}
         </div>
