@@ -1,4 +1,6 @@
-import Hero from "..//src/sections/Hero.jsx";
+
+import LandingPage from "./sections/LandingPage.jsx";
+import Projects from "./sections/Projects.jsx";
 
 
 function App() {
@@ -6,7 +8,8 @@ function App() {
 
   return (
       <>
-          <Hero/>
+          <LandingPage/>
+          <Projects />
       </>
   )
 }

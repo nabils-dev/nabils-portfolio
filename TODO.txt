@@ -1,2 +1,3 @@
 -add "borderAnimation" parameter to Card
--think about layout of "About","Projects","Contact" sections
+
+-bg color-transition between hero and projects sections
