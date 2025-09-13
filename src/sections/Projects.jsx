@@ -8,7 +8,7 @@ const Projects = () => {
     const [active, setActive] = useState(null);
 
     return (
-        <section className="w-screen h-screen border border-red-500" id="projects-section">
+        <section className="w-screen h-screen border-t-4 border-black" id="projects-section">
             <Canvas
                 className="cursor-pointer"
                 camera={{ position: [0, 0, 10], fov: 50 }}

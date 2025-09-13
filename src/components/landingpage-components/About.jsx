@@ -3,7 +3,7 @@ import Card from "../Card.jsx";
 
 const About = () => {
     return (
-        <div className="flex items-start justify-center ml-0 lg:ml-50  p-5">
+        <div className="flex items-start justify-center ml-0 p-5">
             <Card>
                 <ul className="list-disc text-2xl space-y-10">
                     <li>

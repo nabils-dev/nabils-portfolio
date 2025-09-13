@@ -11,7 +11,6 @@ const ChessPuzzle = () => {
                         width: "200px",
                         aspectRatio: "10/12",
                     }}
-                    allowTransparency={true}
 
                 />
             </Card>
