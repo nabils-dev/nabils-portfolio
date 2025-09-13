@@ -10,6 +10,7 @@ const LandingPage = () => {
             <Hero/>
 
             <div className="flex items-start justify-center">
+                <TechStack/>
                 <div className="w-[1000px] border border-green-500">
                     <About/>
                 </div>
@@ -20,7 +21,7 @@ const LandingPage = () => {
                 </div>
 
             </div>
-            <TechStack/>
+
         </section>
     )
 }

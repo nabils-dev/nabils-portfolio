@@ -13,7 +13,7 @@ const About = () => {
                         Currently finishing my bachelor in business informatics at <b className="text-highlight">FH Dortmund</b> with a strong focus on cutting-edge technologies.
                     </li>
                     <li>
-                        Passionate about exploring new opportunities to <b className="text-highlight">collaborate</b> and develop innovative solutions.
+                        <b className="text-highlight">Passionate</b> about exploring new opportunities to collaborate and develop innovative solutions.
                     </li>
                 </ul>
             </Card>

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const Card = ({children, ...props }) => {
+const Card = ({children,smallPadding, ...props }) => {
     const cardRef = useRef(null);
 
     //for border hover animation
@@ -31,7 +31,9 @@ const Card = ({children, ...props }) => {
             ref={cardRef}
             onMouseMove={handleMouseMove(cardRef)}
             {...props}
-            className="card card-border rounded-xl p-10 text-card-txt z-10 flex flex-col group"
+            className={`card card-border rounded-xl text-card-txt z-10 flex flex-col group ${
+                smallPadding ? "p-5" : "p-10"
+            }`}
         >
             {children}
         </div>

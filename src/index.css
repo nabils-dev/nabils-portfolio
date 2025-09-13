@@ -1,20 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&amp;display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Mona Sans", sans-serif;
-  --color-card-border: #1c1c21;
-  --color-card-bg: #0e0e10;
-  --color-card-txt: white;
-  --color-bg-color: darkblue;
-  --color-highlight: blue;
+    --color-card-border: #1c1c21;
+    --color-card-bg: #00081a;
+    --color-card-txt: white;
+    --color-bg-color: #000D53;
+    --color-highlight: blue;
+    --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
+
+
 
 @layer base {
   :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+    font-family: "Unbounded", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 200;
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
@@ -25,7 +27,48 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+  }
+}
+
+/****************************/
+/* Fire text effect */
+/****************************/
+
+
+/* On hover, apply the initial keyframe state. */
+.card .text-highlight {
+  animation: fire 1s ease-in-out infinite alternate;
+  /* Start the animation from the 0% keyframe state */
+  text-shadow:
+          0 0 10px #fefcc9,
+          5px -3px 15px #feec85,
+          -10px -6px 20px #ffae34,
+          10px -12px 25px #ec760c,
+          -10px -18px 30px #cd4606,
+          0 -22px 35px #973716,
+          5px -26px 40px #451b0e;
+}
+
+@keyframes fire {
+  0% {
+    text-shadow:
+            0 0 10px #fefcc9,
+            5px -3px 15px #feec85,
+            -10px -6px 20px #ffae34,
+            10px -12px 25px #ec760c,
+            -10px -18px 30px #cd4606,
+            0 -22px 35px #973716,
+            5px -26px 40px #451b0e;
+  }
+  100% {
+    text-shadow:
+            0 0 10px #fefcc9,
+            5px -3px 15px #fefcc9,
+            -10px -6px 20px #feec85,
+            11px -13px 30px #ffae34,
+            -11px -18px 25px #ec760c,
+            0 -23px 40px #cd4606,
+            5px -26px 40px #973716;
   }
 }
 
@@ -38,7 +81,6 @@
   --start: 0;
   position: relative;
   z-index: 40;
-  /*overflow: hidden;*/
   transition: border-color 1s ease-in-out;
 }
 
@@ -77,7 +119,6 @@
   mask-clip: padding-box, border-box;
   z-index: 1;
 
-
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -90,11 +131,9 @@
   @apply border border-card-border bg-card-bg;
 }
 
-
 /**************************/
 /* Hero text hover effect */
 /**************************/
-
 .word {
   display: flex;
   align-items: center;
@@ -112,4 +151,3 @@
   margin-top: var(--mt, 0px);
   transform: rotate(var(--rot, 0deg));
 }
-
