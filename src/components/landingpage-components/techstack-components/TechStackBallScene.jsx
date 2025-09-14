@@ -3,6 +3,18 @@ import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Ball from "./Ball";
 
+const textures = [
+    "/pingpong/balls/crossp-nodejs.jpg",
+    "/pingpong/balls/crossp-react.jpg",
+    "/pingpong/balls/crossp-tailwind.jpg",
+    "/pingpong/balls/crossp-python.jpg",
+    "/pingpong/balls/crossp-java.jpg",
+    "/pingpong/balls/crossp-typescript.jpg",
+    "/pingpong/balls/crossp-css.jpg",
+    "/pingpong/balls/crossp-html.jpg",
+    "/pingpong/balls/crossp-git.jpg"
+];
+
 const TechStackBallScene = ({ onBallClick }) => {
     const [hovered, setHovered] = useState(false);
 
@@ -17,16 +29,13 @@ const TechStackBallScene = ({ onBallClick }) => {
             const x = (col - 1) * spacing;
             const y = (1 - row) * spacing;
             positions.push([x, y, 0]);
-
-
-            if (row === 2) rotations.push([-Math.PI / 8, 0, 0]);
-            else rotations.push([0, 0, 0]);
+            rotations.push(row === 2 ? [-Math.PI / 8, 0, 0] : [0, 0, 0]);
         }
     }
 
     return (
         <div
-            className={`w-full h-full flex items-center justify-center`}
+            className="w-full h-full flex items-center justify-center"
             style={{ cursor: hovered ? "pointer" : "default" }}
             onPointerEnter={() => setHovered(true)}
             onPointerLeave={() => setHovered(false)}
@@ -35,7 +44,13 @@ const TechStackBallScene = ({ onBallClick }) => {
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
                 {positions.map((pos, i) => (
-                    <Ball key={i} position={pos} rotation={rotations[i]} onClick={onBallClick} />
+                    <Ball
+                        key={i}
+                        position={pos}
+                        rotation={rotations[i]}
+                        texture={textures[i % textures.length]}
+                        onClick={onBallClick}
+                    />
                 ))}
             </Canvas>
         </div>
