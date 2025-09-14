@@ -30,7 +30,11 @@ export default function Ball({ position = [0,0,0], rotation=[0,0,0], texture, on
             rotation={rotation}
             castShadow
             receiveShadow
-            onClick={e => { e.stopPropagation(); onClick && onClick(); }}
+            onClick={e => {
+                e.stopPropagation();
+                console.log("Clicked texture:", texture);
+                onClick && onClick();
+            }}
             onPointerOver={() => setHovered(true)}
             onPointerOut={() => setHovered(false)}
         >
