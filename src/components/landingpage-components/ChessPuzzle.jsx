@@ -8,7 +8,7 @@ const ChessPuzzle = () => {
                 <iframe
                     src="https://lichess.org/training/frame?theme=brown&bg=dark"
                     style={{
-                        width: "200px",
+                        width: "290px",
                         aspectRatio: "10/12",
                     }}
 
