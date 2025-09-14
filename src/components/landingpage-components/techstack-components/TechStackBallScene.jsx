@@ -3,17 +3,18 @@ import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Ball from "./Ball";
 
-
 const textures = [
     "/pingpong/balls/crossp-nodejs.jpg",
     "/pingpong/balls/crossp-react.jpg",
     "/pingpong/balls/crossp-tailwind.jpg",
     "/pingpong/balls/crossp-python.jpg",
     "/pingpong/balls/crossp-java.jpg",
-    "/pingpong/balls/crossp-typescript.jpg",
-    "/pingpong/balls/crossp-css.jpg",
+    "/pingpong/balls/crossp-git.jpg",
     "/pingpong/balls/crossp-html.jpg",
-    "/pingpong/balls/crossp-git.jpg"
+    "/pingpong/balls/crossp-css.jpg",
+    "/pingpong/balls/crossp-typescript.jpg"
+
+
 ];
 
 const TechStackBallScene = ({ onBallClick }) => {
@@ -50,7 +51,7 @@ const TechStackBallScene = ({ onBallClick }) => {
                         position={pos}
                         rotation={rotations[i]}
                         texture={textures[i % textures.length]}
-                        onClick={onBallClick}
+                        onClick={() => onBallClick(textures[i % textures.length])}
                     />
                 ))}
             </Canvas>
