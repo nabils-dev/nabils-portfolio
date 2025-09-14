@@ -9,7 +9,7 @@ const Socials = () => {
                 <img
                     src="/socials/email.png"
                     alt="Email"
-                    className="w-12 h-12 hover:scale-110 transition-transform duration-200"
+                    className="w-12 h-12 hover:scale-120 transition-transform duration-200"
                 />
             </a>
 
@@ -17,7 +17,7 @@ const Socials = () => {
                 <img
                     src="/socials/instagram.png"
                     alt="Instagram"
-                    className="w-12 h-12 hover:scale-110 transition-transform duration-200"
+                    className="w-12 h-12 hover:scale-120 transition-transform duration-200"
                 />
             </a>
 
@@ -25,7 +25,7 @@ const Socials = () => {
                 <img
                     src="/socials/chess.png"
                     alt="Chess"
-                    className="w-12 h-12 hover:scale-110 transition-transform duration-200"
+                    className="w-12 h-12 hover:scale-120 transition-transform duration-200"
                 />
             </a>
         </div>
