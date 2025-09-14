@@ -1,10 +1,11 @@
 'use client';
-import  {useState} from 'react';
+import { useState } from 'react';
 import BackgroundCanvas from '../components/landingpage-components/BackgroundCanvas.jsx';
 import Hero from "../components/landingpage-components/Hero.jsx";
 import About from "../components/landingpage-components/About.jsx";
 import TechStack from "../components/landingpage-components/TechStack.jsx";
 import ChessPuzzle from "../components/landingpage-components/ChessPuzzle.jsx";
+import TechStackGameScene from "../components/landingpage-components/techstack-components/TechStackGameScene.jsx";
 
 const LandingPage = ({ projectsRef }) => {
     const [ballClicked, setBallClicked] = useState(false);
@@ -14,15 +15,15 @@ const LandingPage = ({ projectsRef }) => {
     const handleBallClick = () => {
         setFadeIn(false);
         setTimeout(() => {
-            setShowContent(false);
-            setBallClicked(true);
+            setShowContent(false); // hide normal content
+            setBallClicked(true);  // show game scene
         }, 500);
     };
 
     const handleArrowClick = () => {
         if (ballClicked) {
-            setShowContent(true);
-            setBallClicked(false);
+            setShowContent(true);   // show normal content
+            setBallClicked(false);  // hide game scene
             setFadeIn(false);
             setTimeout(() => setFadeIn(true), 50);
         } else {
@@ -56,6 +57,10 @@ const LandingPage = ({ projectsRef }) => {
                     </div>
                 </div>
             )}
+
+
+            {ballClicked && <TechStackGameScene />}
+
 
             <div
                 className="absolute bottom-4 left-1/2 transform -translate-x-1/2 cursor-pointer z-50 animate-bounce"
