@@ -8,7 +8,8 @@ export default function App() {
     const projectsRef = useRef(null);
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col relative">
+
             <div ref={landingRef}>
                 <LandingPage projectsRef={projectsRef} />
             </div>

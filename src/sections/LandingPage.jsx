@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import BackgroundCanvas from '../components/landingpage-components/BackgroundCanvas.jsx';
 import Hero from "../components/landingpage-components/Hero.jsx";
 import About from "../components/landingpage-components/About.jsx";
@@ -7,6 +7,7 @@ import TechStack from "../components/landingpage-components/TechStack.jsx";
 import ChessPuzzle from "../components/landingpage-components/ChessPuzzle.jsx";
 import TechStackGameScene from "../components/landingpage-components/techstack-components/TechStackGameScene.jsx";
 import {state} from "../components/landingpage-components/techstack-components/GameState.js";
+import Socials from "../components/landingpage-components/Socials.jsx";
 
 const LandingPage = ({ projectsRef }) => {
     const [ballClicked, setBallClicked] = useState(false);
@@ -54,8 +55,9 @@ const LandingPage = ({ projectsRef }) => {
                             <ChessPuzzle />
                         </div>
 
-                        <div className="w-[700px]">
+                        <div className="w-[700px] flex flex-col">
                             <About />
+                            <Socials/>
                         </div>
 
                         <div className="w-[550px] h-[700px] flex">

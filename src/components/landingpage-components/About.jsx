@@ -3,7 +3,7 @@ import Card from "../Card.jsx";
 
 const About = () => {
     return (
-        <div className="flex items-start justify-center ml-0 p-5">
+        <div className="flex flex-col items-start justify-center ml-0 p-5">
             <Card>
                 <ul className="list-disc text-2xl space-y-10">
                     <li>
@@ -16,7 +16,9 @@ const About = () => {
                         <b className="text-highlight">Passionate</b> about exploring new opportunities to collaborate and develop innovative solutions.
                     </li>
                 </ul>
+
             </Card>
+
         </div>
     )
 }

@@ -33,6 +33,7 @@ const Hero = () => {
                         </h3>
                         <p className="text-lg">{heroText.desc}</p>
                         <p className="text-sm text-gray-400">{heroText.location}</p>
+                        <p className="text-md text-gray-400">{heroText.languages}</p>
                     </div>
                 </div>
             </Card>
