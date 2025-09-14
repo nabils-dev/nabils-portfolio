@@ -54,11 +54,11 @@ const LandingPage = ({ projectsRef }) => {
                             <ChessPuzzle />
                         </div>
 
-                        <div className="w-[700px] border border-green-500">
+                        <div className="w-[700px]">
                             <About />
                         </div>
 
-                        <div className="w-[550px] h-[700px] border border-orange-500 flex">
+                        <div className="w-[550px] h-[700px] flex">
                             <TechStack onBallClick={handleBallClick} />
                         </div>
                     </div>
